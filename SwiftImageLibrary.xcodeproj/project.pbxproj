@@ -8,17 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		D121109627FD85F1003C4382 /* SwiftImageLibraryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D121109527FD85F1003C4382 /* SwiftImageLibraryApp.swift */; };
-		D121109827FD85F1003C4382 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D121109727FD85F1003C4382 /* ContentView.swift */; };
 		D121109A27FD85F2003C4382 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D121109927FD85F2003C4382 /* Assets.xcassets */; };
 		D121109D27FD85F2003C4382 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D121109C27FD85F2003C4382 /* Preview Assets.xcassets */; };
+		D12110A427FD8629003C4382 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12110A327FD8629003C4382 /* ImagePicker.swift */; };
+		D12110A727FD895E003C4382 /* ListPhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12110A627FD895E003C4382 /* ListPhotoView.swift */; };
+		D12110AA27FD8994003C4382 /* ListPhotoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12110A927FD8994003C4382 /* ListPhotoViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D121109227FD85F1003C4382 /* SwiftImageLibrary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftImageLibrary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D121109527FD85F1003C4382 /* SwiftImageLibraryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftImageLibraryApp.swift; sourceTree = "<group>"; };
-		D121109727FD85F1003C4382 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D121109927FD85F2003C4382 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D121109C27FD85F2003C4382 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D12110A327FD8629003C4382 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		D12110A627FD895E003C4382 /* ListPhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPhotoView.swift; sourceTree = "<group>"; };
+		D12110A927FD8994003C4382 /* ListPhotoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPhotoViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,9 +55,11 @@
 		D121109427FD85F1003C4382 /* SwiftImageLibrary */ = {
 			isa = PBXGroup;
 			children = (
+				D12110A827FD897C003C4382 /* ViewModels */,
+				D12110A527FD8939003C4382 /* Views */,
 				D121109527FD85F1003C4382 /* SwiftImageLibraryApp.swift */,
-				D121109727FD85F1003C4382 /* ContentView.swift */,
 				D121109927FD85F2003C4382 /* Assets.xcassets */,
+				D12110A327FD8629003C4382 /* ImagePicker.swift */,
 				D121109B27FD85F2003C4382 /* Preview Content */,
 			);
 			path = SwiftImageLibrary;
@@ -65,6 +71,22 @@
 				D121109C27FD85F2003C4382 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		D12110A527FD8939003C4382 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D12110A627FD895E003C4382 /* ListPhotoView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D12110A827FD897C003C4382 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				D12110A927FD8994003C4382 /* ListPhotoViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +159,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D121109827FD85F1003C4382 /* ContentView.swift in Sources */,
+				D12110A427FD8629003C4382 /* ImagePicker.swift in Sources */,
+				D12110AA27FD8994003C4382 /* ListPhotoViewModel.swift in Sources */,
 				D121109627FD85F1003C4382 /* SwiftImageLibraryApp.swift in Sources */,
+				D12110A727FD895E003C4382 /* ListPhotoView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,6 +294,8 @@
 				DEVELOPMENT_TEAM = S7J9Y64448;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "$(PRODUCT_NAME)";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "$(PRODUCT_NAME)";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -299,6 +325,8 @@
 				DEVELOPMENT_TEAM = S7J9Y64448;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "$(PRODUCT_NAME)";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "$(PRODUCT_NAME)";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
